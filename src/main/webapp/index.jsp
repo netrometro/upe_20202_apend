@@ -10,9 +10,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Apend</title>
+		<link rel="stylesheet" href="assets/style.css"/>
 	</head>
 	<body>
-		<h1>Ok</h1>
+		<h1>Ok</h1> 
 	</body>
 </html>
 
