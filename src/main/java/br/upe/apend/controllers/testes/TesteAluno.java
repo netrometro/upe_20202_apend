@@ -30,6 +30,7 @@ public class TesteAluno extends HttpServlet {
 		System.out.println(a.getEmail());
 		System.out.println(a.getSenha());
 		
+		/*
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html><body><h1>Teste Entidade Aluno</h1>");
@@ -38,8 +39,11 @@ public class TesteAluno extends HttpServlet {
 		out.println("<p>" + a.getSenha() + "</p>");
 		out.println("</body></html>");
 		out.flush();
+		*/
 		
+		request.setAttribute("aluno", a);
 		
+		request.getRequestDispatcher("/testealuno.jsp").forward(request, response);
 	}
 
 }
