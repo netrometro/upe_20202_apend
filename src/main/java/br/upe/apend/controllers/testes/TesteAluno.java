@@ -1,6 +1,8 @@
 package br.upe.apend.controllers.testes;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,9 +25,21 @@ public class TesteAluno extends HttpServlet {
 		a.setEmail("fulano@email.com");
 		a.setSenha("111");
 		
+		
 		System.out.println(a.getNome());
 		System.out.println(a.getEmail());
 		System.out.println(a.getSenha());
+		
+		PrintWriter out = response.getWriter();
+		
+		out.println("<html><body><h1>Teste Entidade Aluno</h1>");
+		out.println("<p>" + a.getNome() + "</p>");
+		out.println("<p>" + a.getEmail() + "</p>");
+		out.println("<p>" + a.getSenha() + "</p>");
+		out.println("</body></html>");
+		out.flush();
+		
+		
 	}
 
 }
