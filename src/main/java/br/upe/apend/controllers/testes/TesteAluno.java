@@ -1,7 +1,7 @@
 package br.upe.apend.controllers.testes;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+//import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.upe.apend.model.Aluno;
+import br.upe.apend.model.entities.Aluno;
 
 @WebServlet("/teste/aluno")
 public class TesteAluno extends HttpServlet {
