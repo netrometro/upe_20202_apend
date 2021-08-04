@@ -38,6 +38,10 @@ public class DAOAluno {
 			lista.add(a);
 		}
 		
+		rs.close();
+		stmt.close();
+		conn.close();
+		
 		return lista;
 	}
 	
