@@ -1,11 +1,14 @@
 package br.upe.apend.model.entities;
 
+import java.util.Date;
+
 public class Aluno {
 
 	private int id;
 	private String nome;
 	private String email;
 	private String senha;
+	private Date dataCriacao;
 	
 	public int getId() {
 		return id;
@@ -30,6 +33,12 @@ public class Aluno {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public Date getDataCriacao() {
+		return dataCriacao;
+	}
+	public void setDataCriacao(Date dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 	
 }
