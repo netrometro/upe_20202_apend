@@ -1,5 +1,6 @@
 package br.upe.apend.model.entities;
 
+
 public class Professor {
 
 	private int id;
