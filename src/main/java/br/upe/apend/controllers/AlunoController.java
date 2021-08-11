@@ -1,6 +1,7 @@
-package br.upe.apend.controllers.testes;
+package br.upe.apend.controllers;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -14,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import br.upe.apend.model.entities.Aluno;
 import br.upe.apend.model.persistency.DAOAluno;
 
-@WebServlet("/teste/dao/aluno")
-public class TesteDAOAluno extends HttpServlet {
+@WebServlet("/aluno")
+public class AlunoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    
-    public TesteDAOAluno() {
+       
+    public AlunoController() {
         super();
     }
 
@@ -34,17 +35,36 @@ public class TesteDAOAluno extends HttpServlet {
 		}
 		
 		request.setAttribute("listagem", lista);
-		RequestDispatcher rd = request.getRequestDispatcher("/testedaoaluno.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/aluno.jsp");
 		rd.forward(request, response);
 	}
 
-	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
+		String senha = request.getParameter("senha");
+		/*
+		PrintWriter out = response.getWriter();
+		out.println("post");
+		out.println(nome);
+		out.println(email);
+		out.println(senha);
+		out.flush();
+		*/
+		Aluno aluno = new Aluno();
+		aluno.setNome(nome);
+		aluno.setEmail(email);
+		aluno.setSenha(senha);
 		
+		DAOAluno daoAluno = new DAOAluno();
 		
+		try {
+			daoAluno.inserir(aluno);
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
 		
+		this.doGet(request, response);
 	}
-	
-	
 
 }
