@@ -43,7 +43,7 @@ public class TesteAluno extends HttpServlet {
 		
 		request.setAttribute("aluno", a);
 		
-		request.getRequestDispatcher("/testealuno.jsp").forward(request, response);
+		request.getRequestDispatcher("/testeaula.jsp").forward(request, response);
 	}
 
 }
