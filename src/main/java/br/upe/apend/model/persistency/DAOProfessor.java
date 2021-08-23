@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import br.upe.apend.model.entities.Professor;
 
 public class DAOProfessor {
@@ -43,6 +44,22 @@ public class DAOProfessor {
 		conn.close();
 		
 		return lista;
-	}
+}
+
+public void inserir(Professor professor) throws ClassNotFoundException, SQLException {
+	Connection conn = db.getConnection();
+	Statement stmt = conn.createStatement();
 	
+	String sql = "INSERT INTO p (nome, email, senha, created_on) VALUES ("
+	  + "'" + professor.getNome() + "', "
+	  + "'" + professor.getEmail() + "', "
+	  + "'" + professor.getSenha() + "',"
+	  + "now()"
+	  + ");";
+    stmt.executeUpdate(sql);
+    
+	stmt.close();
+	conn.close();		
+}
+
 }
