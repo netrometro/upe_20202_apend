@@ -44,5 +44,21 @@ public class DAOAluno {
 		
 		return lista;
 	}
+
+	public void inserir(Aluno aluno) throws ClassNotFoundException, SQLException {
+		Connection conn = db.getConnection();
+		Statement stmt = conn.createStatement();
+		
+		String sql = "INSERT INTO aluno (nome, email, senha, created_on) VALUES ("
+		  + "'" + aluno.getNome() + "', "
+		  + "'" + aluno.getEmail() + "', "
+		  + "'" + aluno.getSenha() + "',"
+		  + "now()"
+		  + ");";
+        stmt.executeUpdate(sql);
+        
+		stmt.close();
+		conn.close();		
+	}
 	
 }
