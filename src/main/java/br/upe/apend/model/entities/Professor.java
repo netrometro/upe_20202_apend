@@ -1,5 +1,6 @@
 package br.upe.apend.model.entities;
 
+import java.sql.Date;
 
 public class Professor {
 
@@ -48,5 +49,10 @@ public class Professor {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public void setDataCriacao(Date date) {
+		// TODO Auto-generated method stub
+		
 	}
 }
