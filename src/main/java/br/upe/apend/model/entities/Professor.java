@@ -8,6 +8,7 @@ public class Professor {
 	private String nome;
 	private String email;
 	private String senha;
+	private Date dataCriacao;
 
 	public Professor() {
 	}
@@ -26,7 +27,7 @@ public class Professor {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+			
 	public String getNome() {
 		return nome;
 	}
@@ -51,8 +52,10 @@ public class Professor {
 		this.senha = senha;
 	}
 
-	public void setDataCriacao(Date date) {
-		// TODO Auto-generated method stub
-		
+	public Date getDataCriacao() {
+		return dataCriacao;
+	}
+	public void setDataCriacao(Date dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
 }
