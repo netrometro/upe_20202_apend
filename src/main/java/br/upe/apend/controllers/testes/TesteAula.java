@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.upe.apend.model.entities.Aula;
 
-/**
- * Servlet implementation class TesteAula
- */
+
 @WebServlet("/teste/aula")
 public class TesteAula extends HttpServlet {
 	private static final long serialVersionUID = 1L;
