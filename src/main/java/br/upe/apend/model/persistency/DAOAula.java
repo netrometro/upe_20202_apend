@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.upe.apend.model.entities.Aluno;
+
 import br.upe.apend.model.entities.Aula;
 
 public class DAOAula {
@@ -50,7 +50,7 @@ private Database db;
 		Connection conn = db.getConnection();
 		Statement stmt = conn.createStatement();
 		
-		String sql = "INSERT INTO aluno (titulo, descricao, idCurso, created_on) VALUES ("
+		String sql = "INSERT INTO aula (titulo, descricao, idCurso, created_on) VALUES ("
 		  + "'" + aula.getTitulo() + "', "
 		  + "'" + aula.getDescricao() + "', "
 		  + "'" + aula.getIdCurso() + "',"

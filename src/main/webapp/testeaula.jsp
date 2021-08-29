@@ -14,10 +14,10 @@
 <body>
 <h1>Teste entidade Aula</h1>
 
-<p>Id : <%= au.getId() %></p>
-<p>IdCurso : <%= au.getIdCurso() %></p>
-<p>Titulp : <%= au.getTitulo() %></p>
-<p>Descricao : <%= au.getDescricao() %></p>
+<p>Id: <%= au.getId() %></p>
+<p>IdCurso: <%= au.getIdCurso() %></p>
+<p>Titulo: <%= au.getTitulo() %></p>
+<p>Descricao: <%= au.getDescricao() %></p>
 
 <table border="1">
 <% for (int i = 0; i < 10; i++) { %>
