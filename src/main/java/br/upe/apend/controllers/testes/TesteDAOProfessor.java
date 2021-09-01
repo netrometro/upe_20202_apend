@@ -34,7 +34,7 @@ public class TesteDAOProfessor extends HttpServlet {
 		}
 		
 		request.setAttribute("listagem", lista);
-		RequestDispatcher rd = request.getRequestDispatcher("/testedaoaluno.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/testedaoprofessor.jsp");
 		rd.forward(request, response);
 	}
 

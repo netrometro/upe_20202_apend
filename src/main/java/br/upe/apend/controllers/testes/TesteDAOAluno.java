@@ -33,6 +33,10 @@ public class TesteDAOAluno extends HttpServlet {
 			e.printStackTrace();
 		}
 		
+		for (Aluno aluno : lista) {
+      System.out.println(aluno.getId());
+    }
+		
 		request.setAttribute("listagem", lista);
 		RequestDispatcher rd = request.getRequestDispatcher("/testedaoaluno.jsp");
 		rd.forward(request, response);

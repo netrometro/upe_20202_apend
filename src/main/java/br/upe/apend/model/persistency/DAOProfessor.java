@@ -50,7 +50,7 @@ public void inserir(Professor professor) throws ClassNotFoundException, SQLExcep
 	Connection conn = db.getConnection();
 	Statement stmt = conn.createStatement();
 	
-	String sql = "INSERT INTO p (nome, email, senha, created_on) VALUES ("
+	String sql = "INSERT INTO professor (nome, email, senha, created_on) VALUES ("
 	  + "'" + professor.getNome() + "', "
 	  + "'" + professor.getEmail() + "', "
 	  + "'" + professor.getSenha() + "',"

@@ -55,10 +55,21 @@ public class DAOAluno {
 		  + "'" + aluno.getSenha() + "',"
 		  + "now()"
 		  + ");";
-        stmt.executeUpdate(sql);
+    stmt.executeUpdate(sql);
         
 		stmt.close();
 		conn.close();		
+	}
+	
+	public void excluir(int id) throws ClassNotFoundException, SQLException {
+	  Connection conn = db.getConnection();
+	  Statement stmt = conn.createStatement();
+	  
+	  String sql = "DELETE FROM aluno WHERE id = " + id + " ;";
+	  stmt.executeUpdate(sql);
+	  
+	  stmt.close();
+    conn.close();
 	}
 	
 }

@@ -43,7 +43,7 @@ public class InstallProfessor {
 
 		String sql;
 
-		sql = "INSERT INTO prpfessor (nome, email, senha, created_on) VALUES ('Fulano de Tal', 'fulano@email.com', '111', now())";
+		sql = "INSERT INTO professor (nome, email, senha, created_on) VALUES ('Fulano de Tal', 'fulano@email.com', '111', now())";
 		sttm.executeUpdate(sql);
 		sql = "INSERT INTO professor (nome, email, senha, created_on) VALUES ('Beltrano de Tal', 'beltrano@email.com', '222', now())";
 		sttm.executeUpdate(sql);

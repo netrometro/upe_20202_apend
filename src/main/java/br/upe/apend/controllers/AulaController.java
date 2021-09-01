@@ -47,7 +47,7 @@ public class AulaController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String titulo = request.getParameter("titulo");
 		String descricao = request.getParameter("descricao");
-		//String idCurso = request.getParameter("idCurso");
+		String idCurso = request.getParameter("idCurso");
 		/*
 		PrintWriter out = response.getWriter();
 		out.println("post");
@@ -59,7 +59,7 @@ public class AulaController extends HttpServlet {
 		Aula aula = new Aula();
 		aula.setTitulo(titulo);
 		aula.setDescricao(descricao);
-		//aula.setIdCurso(idCurso);
+		aula.setIdCurso(Integer.parseInt(idCurso));
 		
 		DAOAula daoAula = new DAOAula();
 		

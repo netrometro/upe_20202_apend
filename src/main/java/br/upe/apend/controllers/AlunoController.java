@@ -24,10 +24,10 @@ public class AlunoController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		if (session.getAttribute("user") == null) {
-			response.sendRedirect(request.getContextPath() + "/error.jsp");
-		}
+		//HttpSession session = request.getSession();
+		//if (session.getAttribute("user") == null) {
+		//	response.sendRedirect(request.getContextPath() + "/error.jsp");
+		//}
 		
 		DAOAluno daoAluno = new DAOAluno();
 		
