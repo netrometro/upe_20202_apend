@@ -10,10 +10,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Apend</title>
-		<link rel="stylesheet" href="assets/style.css"/>
+		<link rel="icon" href="assets/educacao.png" />
+		<link rel="stylesheet" href="assets/style.css" />
 	</head>
 	<body>
-		<h1>Ok</h1> 
+		<div class="container">
+		  <header>
+		  	<div class="branding">
+		  		<div class="brand"><img src="assets/educacao.png" /></div>
+		  		Apend
+		  	</div>
+		  	<div class="autentication">
+				<form action="autentic" method="post">
+					Usuário: <input name="user" type="text" /> 
+					Senha: <input name="pass" type="password" /> 
+					<input type="submit" value="Entrar"/>
+				</form>
+				<a href="autentic">Sair</a>
+		  	</div>
+		  </header>
+		
+		
+		
+			<h1>Append</h1> 
+			<nave>
+				<a href="/upe_20202_apend/aluno">Gerência de Aluno</a> | 
+				<a href="#">Gerência de [Entidade]</a>
+			</nave>
+		</div>
 	</body>
 </html>
 

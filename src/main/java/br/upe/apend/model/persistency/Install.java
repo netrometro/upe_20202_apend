@@ -24,7 +24,7 @@ public class Install {
 	
 	public void populate() throws ClassNotFoundException, SQLException {
 		ial.populate();
-		//iaul.populate();
+		iau.populate();
 		// Invoque o método de popular aqui.
 		
 	}

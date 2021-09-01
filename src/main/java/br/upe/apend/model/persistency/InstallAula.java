@@ -18,7 +18,7 @@ public class InstallAula {
 
 		String sql;
 
-		sql = "DROP TABLE IF EXISTS aluno;";
+		sql = "DROP TABLE IF EXISTS aula;";
 		stmt.executeUpdate(sql);
 		System.out.println("Tabela AULA apagada...");
 

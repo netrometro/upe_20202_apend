@@ -1,4 +1,58 @@
-h1 {
-	color: red;
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+
+body {
+	background-image: url('bg.jpg');
+}
+
+.container {
+	width: 780px;
+	margin: 0px auto;
+}
+
+.container header {
+	background-color: #d2d2d2;
+	background-color: #722ec1;
+	padding: 10px;
+}
+
+.branding {
+	display: flex;
+	justify-content: space-between;
+	font-size: 50px;
+	font-weight: 100px;
+	color: white;
+}
+
+.brand {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	background-color: white;
+}
+
+.brand img {
+	width: 50px;
+	height: 50px;
+}
+
+nave {
+	display: block;
 	text-align: center;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+nave, nave a {
+	color: #9097fd;
+	text-decoration: none;
+}
+
+nave a:hover {
+	text-decoration: underline;
 }
