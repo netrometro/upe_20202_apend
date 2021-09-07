@@ -61,4 +61,16 @@ private Database db;
 		stmt.close();
 		conn.close();		
 	}
+	
+	public void excluir(int id) throws ClassNotFoundException, SQLException {
+		  Connection conn = db.getConnection();
+		  Statement stmt = conn.createStatement();
+		  
+		  String sql = "DELETE FROM aula WHERE id = " + id + " ;";
+		  stmt.executeUpdate(sql);
+		  
+		  stmt.close();
+	    conn.close();
+		}
+	
 }

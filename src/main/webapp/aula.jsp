@@ -37,6 +37,7 @@ if (request.getAttribute("listagem") != null) {
 				<th>Titulo</th>
 				<th>Descricao</th>
 				<th>IdCurso</th>
+				<th>Excluir</th>
 			</tr>
 <% 
 if (l != null) {
@@ -46,6 +47,9 @@ if (l != null) {
 				<td><%= au.getTitulo() %></td>
 				<td><%= au.getDescricao() %></td>
 				<td><%= au.getIdCurso() %></td>
+				<td>
+				<a href="aulaexcluir?id=<%= au.getId() %>">Excluir</a>
+				</td> 
 			</tr>
 <% } } %>
 		</table>
