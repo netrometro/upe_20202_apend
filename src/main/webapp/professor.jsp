@@ -39,6 +39,7 @@ if (request.getAttribute("listagem") != null) {
 				<th>Nome</th>
 				<th>Email</th>
 				<th>Data da criação</th>
+				<th>Excluir</th>
 			</tr>
 <% 
 if (l != null) {
@@ -48,6 +49,9 @@ if (l != null) {
 				<td><%= p.getNome() %></td>
 				<td><%= p.getEmail() %></td>
 				<td><%= p.getDataCriacao().toString() %></td>
+				<td>
+					<p href="professorexcluir?id=<%= p.getId() %>">Excluir</p>
+				</td>
 			</tr>
 <% } } %>
 		</table>
